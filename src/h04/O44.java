@@ -11,5 +11,6 @@ public class O44 extends Applet {
 
 
     public void paint(Graphics g) {
+
     }
 }
