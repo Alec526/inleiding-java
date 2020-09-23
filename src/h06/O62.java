@@ -29,9 +29,9 @@ public class O62 extends Applet {
         g.drawString("Seconden in een dag:", 80, 125);
         g.drawString("Seconden in een jaar:", 80, 150);
 
-        g.drawString("Sec "+ uitkomst, 225, 100);
-        g.drawString("Sec "+ uitkomst1, 225, 125);
-        g.drawString("Sec "+ uitkomst2, 225, 150);
+        g.drawString("Sec "+ uitkomst, 226, 100);
+        g.drawString("Sec "+ uitkomst1, 226, 125);
+        g.drawString("Sec "+ uitkomst2, 226, 150);
 
     }
 }
