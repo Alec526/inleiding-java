@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class O101 extends Applet {
 
     TextField tekstvak;
-    int getal;
+    int hoogste, getal;
     String tekst;
 
 
@@ -32,9 +32,10 @@ public class O101 extends Applet {
             String s;
 
             s = tekstvak.getText();
-            getal = Integer.parseInt( s );
-            if ( getal > 20 ) {
-                tekst = "kaas";
+            getal = Integer.parseInt(s);
+            if (getal > hoogste) {
+                hoogste = getal;
+                tekst = "hoogste getal tot nu toe is: " +hoogste;
                 repaint();
             }
 
