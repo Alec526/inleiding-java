@@ -8,33 +8,24 @@ import java.awt.event.ActionListener;
 
 public class O103 extends Applet {
 
-    int maand, jaar;
-    TextField tekstvak, tekstvak2;
-    String s, tekst, tekst2;
-    Label label, label2;
+    int maand;
+    TextField tekstvak;
+    String s, tekst;
+    Label label;
 
 
     public void init() {
-        setSize(1000, 300);
         tekstvak = new TextField("", 20);
-        tekstvak2 = new TextField("", 20);
         label = new Label("Type het maandnummer en druk op enter");
-        label2 = new Label("Type een jaartal en druk op enter");
         tekstvak.addActionListener(new Maand());
-        tekstvak.addActionListener(new Jaar());
-        tekst = "";
-        tekst2 = "";
 
         add(label);
-        add(label2);
         add(tekstvak);
-        add(tekstvak2);
 
     }
 
     public void paint(Graphics g) {
         g.drawString(tekst, 80, 80);
-        g.drawString(tekst2, 100, 80);
 
     }
 
@@ -85,21 +76,6 @@ public class O103 extends Applet {
             }
             repaint();
 
-        }
-    }
-
-    class Jaar implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            s = tekstvak2.getText();
-            jaar = Integer.parseInt( s);
-            if ( (jaar % 4 == 0 && !(jaar % 100 == 0)) ||
-                    jaar % 400 == 0 ) {
-                tekst = ""+ jaar + " is een schrikkeljaar";
-            }
-            else {
-                tekst = ""+ jaar + " is geen schrikkeljaar";
-            }
-            repaint();
         }
     }
 }
