@@ -14,7 +14,7 @@ public class O112 extends Applet {
         int teller;
         int x = 0;
 
-        for(teller = 10; teller < 21; teller++) {
+        for(teller = 10; teller <= 20; teller++) {
             x += 20;
             g.drawString("" + teller, x, 50);
         }
