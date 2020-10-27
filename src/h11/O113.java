@@ -10,19 +10,20 @@ public class O113 extends Applet {
     }
 
     public void paint(Graphics g) {
-        int prev2Getal = 1, prevGetal = 1, currentGetal, x = 80;
+        int getal1 = 1, getal2 = 1, getal, x = 160;
 
-        g.drawString("" + prev2Getal,20,20);
-        g.drawString("" + prevGetal,50,20);
+        g.drawString("" +getal2, 50, 30);
+        g.drawString("" +getal1, 80, 30);
 
         while(true) {
-            currentGetal = prevGetal + prev2Getal;
-            if (currentGetal > 1000) break;
-            g.drawString("" + currentGetal, x, 20);
-            x += 30;
-            prev2Getal = prevGetal;
-            prevGetal = currentGetal;
+            getal = getal1 + getal2;
+            if (getal > 5000) break;
+            g.drawString("" + getal, x, 30);
+            x += 40;
+            getal2 = getal1;
+            getal1 = getal;
         }
+
 
     }
 }
