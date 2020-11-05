@@ -39,7 +39,7 @@ public class O119 extends Applet {
                         g.fillRect(x, y, b, h);
                     }
                 }
-                x += b
+                x += b;
             }
             x = 50;
             y += h;
