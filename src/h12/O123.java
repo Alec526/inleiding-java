@@ -19,6 +19,10 @@ public class O123 extends Applet {
 
         add(knop);
 
+        for (int repeat = 0; repeat < tekstvak.length; repeat++) {
+            tekstvak[repeat] = 100 * (repeat + 1);
+        }
+
     }
 
 
