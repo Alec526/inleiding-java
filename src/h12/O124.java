@@ -15,7 +15,7 @@ public class O124 extends Applet {
     String found = "";
 
     public void init() {
-        tekstvak = new TextField();
+        tekstvak = new TextField("0", 5);
         knop = new Button("Ok");
         knop.addActionListener(new KnopListener());
 
@@ -24,6 +24,15 @@ public class O124 extends Applet {
     }
 
     public void paint(Graphics g) {
+        int drawI, y=70;
+        g.drawString("" + found,150,50);
+
+        if (search) {
+            for(drawI = 0; drawI < getallen.length; drawI++) {
+                y += 20;
+                g.drawString("" + getallen[drawI], 150, y);
+            }
+        }
 
     }
 
@@ -36,10 +45,13 @@ public class O124 extends Applet {
             while (i < getallen.length) {
                 if (getallen[i] == gezocht) {
                     search = true;
-                    found = s + "Dit getal staat in de tabel.";
-                } else {
+                    found = s + " Dit getal staat in de tabel.";
+                    break;
+
+                }
+                else {
                     search = false;
-                    found = s + "Dit getal staat niet in de tabel.";
+                    found = s + " Dit getal staat niet in de tabel.";
                     i++;
                 }
             }
