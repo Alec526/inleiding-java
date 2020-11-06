@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class O124 extends Applet {
+public class O125 extends Applet {
     int[] getallen = {3, 6, 12, 24, 48};
     TextField tekstvak;
     Button knop;
@@ -47,6 +47,7 @@ public class O124 extends Applet {
                     search = true;
                     found = s + " Dit getal staat in de tabel.";
                     break;
+
                 }
                 else {
                     search = false;
